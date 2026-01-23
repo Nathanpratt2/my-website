@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathan Pratt - Portfolio</title>
     <!-- Import Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Import FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            /* Background Image - Nature/Dark theme */
-            --bg-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop');
+            /* Background Image - Professional Dark Finance Theme */
+            --bg-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
         }
 
         body {
@@ -22,118 +22,170 @@
             background-position: center;
             background-attachment: fixed;
             margin: 0;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
-        /* Dark overlay to make text readable */
+        /* Dark overlay */
         body::before {
             content: '';
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(15, 23, 42, 0.6); /* Darker blue-grey tint for finance look */
             z-index: -1;
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 50px 40px;
+            padding: 40px;
             border-radius: 20px;
             text-align: center;
-            max-width: 400px;
-            width: 90%;
+            max-width: 420px;
+            width: 100%;
             color: white;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
         }
 
         .profile-img {
-            width: 140px;
-            height: 140px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            border: 4px solid rgba(255, 255, 255, 0.3);
+            border: 4px solid rgba(255, 255, 255, 0.2);
             margin: 0 auto 20px;
             object-fit: cover;
-            /* Placeholder Image - See instructions below to change this */
-            background-image: url('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=800&q=80');
+            /* Abstract Professional/Finance Image (Skyscraper/Abstract) */
+            background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
         }
 
         h1 {
             margin: 0;
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 600;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         p.title {
-            margin: 10px 0 30px;
+            margin: 8px 0 25px;
             font-size: 14px;
-            opacity: 0.9;
-            font-weight: 300;
-            letter-spacing: 2px;
+            opacity: 0.85;
+            font-weight: 400;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
         }
 
+        .section-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.2);
+            margin: 25px 0;
+            width: 100%;
+        }
+
+        /* --- Link Buttons --- */
         .links {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
         .link-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.9);
-            color: #333;
+            background: rgba(255, 255, 255, 0.95);
+            color: #1e293b;
             text-decoration: none;
-            padding: 16px;
-            border-radius: 50px;
+            padding: 14px;
+            border-radius: 12px;
             font-weight: 600;
-            transition: transform 0.2s, background 0.2s;
+            font-size: 15px;
+            transition: all 0.2s ease;
             gap: 10px;
-        }
-
-        .link-btn i {
-            font-size: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .link-btn:hover {
-            transform: scale(1.05);
+            transform: translateY(-2px);
             background: #ffffff;
-            color: #000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        /* Specific Brand Colors on Hover */
+        /* Brand Colors on Hover */
         .link-btn.linkedin:hover { color: #0077b5; }
-        .link-btn.github:hover { color: #333; }
+        .link-btn.github:hover { color: #24292e; }
         .link-btn.substack:hover { color: #FF6719; }
 
+        /* --- Contact Box --- */
+        .contact-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-item i {
+            color: #60a5fa; /* Soft blue icon color */
+            font-size: 16px;
+            margin-top: 3px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .contact-label {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            opacity: 0.6;
+            margin-bottom: 2px;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-value {
+            font-weight: 500;
+        }
+
         .footer {
-            margin-top: 30px;
-            font-size: 12px;
-            opacity: 0.7;
+            margin-top: 25px;
+            font-size: 11px;
+            opacity: 0.5;
         }
     </style>
 </head>
 <body>
 
     <div class="glass-card">
-        <!-- Profile Image -->
+        <!-- Abstract Finance/Business Image -->
         <div class="profile-img"></div>
         
         <!-- Name & Title -->
         <h1>Nathan Pratt</h1>
-        <p class="title">Developer | Tech Enthusiast</p>
+        <p class="title">Finance Professional</p>
 
         <!-- Links -->
         <div class="links">
@@ -148,6 +200,27 @@
             <a href="https://substack.com/@nathanpratt2" target="_blank" class="link-btn substack">
                 <i class="fas fa-newspaper"></i> Substack
             </a>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Contact Info Section -->
+        <div class="contact-box">
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <span class="contact-label">Address</span>
+                    <span class="contact-value">2727 Canterburry Blvd<br>Fort Wayne, IN 46835</span>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <span class="contact-label">Phone</span>
+                    <span class="contact-value">260-207-4699</span>
+                </div>
+            </div>
         </div>
 
         <div class="footer">
