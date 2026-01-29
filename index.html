@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathan Pratt - Portfolio</title>
-    <!-- Import Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Import FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -38,7 +36,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(15, 23, 42, 0.6); /* Darker blue-grey tint for finance look */
+            background: rgba(15, 23, 42, 0.6);
             z-index: -1;
         }
 
@@ -63,7 +61,7 @@
             border: 4px solid rgba(255, 255, 255, 0.2);
             margin: 0 auto 20px;
             object-fit: cover;
-            /* Abstract Professional/Finance Image (Skyscraper/Abstract) */
+            /* Abstract Professional/Finance Image */
             background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
@@ -121,10 +119,63 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        /* Brand Colors on Hover */
         .link-btn.linkedin:hover { color: #0077b5; }
         .link-btn.github:hover { color: #24292e; }
         .link-btn.substack:hover { color: #FF6719; }
+
+        /* --- Section Headers --- */
+        .section-header {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-align: left;
+            color: #93c5fd; /* Light Blue Accent */
+        }
+
+        /* --- Sector List --- */
+        .sector-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .sector-item {
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0.9;
+        }
+
+        .sector-item i {
+            color: #60a5fa;
+            font-size: 10px;
+        }
+
+        /* --- Skills Tags --- */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: flex-start;
+        }
+
+        .skill-tag {
+            font-size: 11px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 500;
+            white-space: nowrap;
+        }
 
         /* --- Contact Box --- */
         .contact-box {
@@ -150,7 +201,7 @@
         }
 
         .contact-item i {
-            color: #60a5fa; /* Soft blue icon color */
+            color: #60a5fa;
             font-size: 16px;
             margin-top: 3px;
             width: 20px;
@@ -180,14 +231,11 @@
 <body>
 
     <div class="glass-card">
-        <!-- Abstract Finance/Business Image -->
         <div class="profile-img"></div>
         
-        <!-- Name & Title -->
         <h1>Nathan Pratt</h1>
         <p class="title">Finance Professional</p>
 
-        <!-- Links -->
         <div class="links">
             <a href="https://www.linkedin.com/in/nathan-pratt-8b29823a7" target="_blank" class="link-btn linkedin">
                 <i class="fab fa-linkedin"></i> LinkedIn
@@ -204,7 +252,33 @@
 
         <div class="section-divider"></div>
 
-        <!-- Contact Info Section -->
+        <div class="section-header">Sector Experience</div>
+        <ul class="sector-list">
+            <li class="sector-item"><i class="fas fa-circle"></i> Agricultural</li>
+            <li class="sector-item"><i class="fas fa-circle"></i> Banking</li>
+            <li class="sector-item"><i class="fas fa-circle"></i> Manufacturing</li>
+            <li class="sector-item"><i class="fas fa-circle"></i> Real Estate</li>
+            <li class="sector-item"><i class="fas fa-circle"></i> Healthcare</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <div class="section-header">Core Skills</div>
+        <div class="skills-grid">
+            <div class="skill-tag">Reducing Setbacks</div>
+            <div class="skill-tag">Financial Analysis</div>
+            <div class="skill-tag">Strategic Planning</div>
+            <div class="skill-tag">Budgeting</div>
+            <div class="skill-tag">Forecasting</div>
+            <div class="skill-tag">Tax Compliance</div>
+            <div class="skill-tag">Auditing</div>
+            <div class="skill-tag">GAAP Standards</div>
+            <div class="skill-tag">Risk Management</div>
+            <div class="skill-tag">Data Analysis</div>
+        </div>
+
+        <div class="section-divider"></div>
+
         <div class="contact-box">
             <div class="contact-item">
                 <i class="fas fa-map-marker-alt"></i>
